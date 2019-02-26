@@ -5,9 +5,9 @@ Event Messages are sent using Kafka and Received and processed using Spark-Strea
 There are two jupyter notebooks here.
 KafkaSendMessage.ipynb -> Creates a kafka topic and starts sending the messages to kafka broker.
 
-SparkReceiveKafkaStream.ipynb -> Creates a spark stream object on the Kafka topic. 
-                                 Groups the events(kafka messages) withing a sliding window interval using reduceByWindow.
-                                 Calls the proecessing function for this group of events.
+SparkReceiveKafkaStream.ipynb -> 1) Creates a spark stream object on the Kafka topic. 
+                                 2) Groups the events(kafka messages) within a sliding window interval using reduceByWindow.
+                                 3) Calls the proecessing function for this group of events.
                                  
  I have used, Kafka 2.11-0.11.0.2, spark 2.4.0, and jdk 8.0 , on windows.
  Initially tried to use jdk 11, but this caused issues while calling collect/count functions on the RDD.
